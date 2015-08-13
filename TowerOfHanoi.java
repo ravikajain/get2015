@@ -1,13 +1,13 @@
 import java.util.*;
 public class TowerOfHanoi {
-	int numOfDisk;
-	TowerOfHanoi(int numOfDisk) {
-		this.numOfDisk = numOfDisk;
-	}
+    int numOfDisk;
+    TowerOfHanoi(int numOfDisk) {
+	this.numOfDisk = numOfDisk;
+    }
 	
    List<String> list = new ArrayList<String>();
    public List<String> towerOfHanoi(String source, String destination, String temp, int numOfDisk) {
-	   int diskNumber = this.numOfDisk - numOfDisk + 1;
+       int diskNumber = this.numOfDisk - numOfDisk + 1;
        if (numOfDisk == 1) {
     	   String str = "Move Disk " + diskNumber + " from " + source + " to " + destination;
            list.add(str);
@@ -22,7 +22,6 @@ public class TowerOfHanoi {
    }
 
    public static void main(String[] args) {
-       
        System.out.print("Enter number of discs: ");
        Scanner scanner = new Scanner(System.in);
        int discs = scanner.nextInt();
@@ -30,7 +29,7 @@ public class TowerOfHanoi {
        List<String> result = new ArrayList<String>();
        result = towersOfHanoi.towerOfHanoi("A", "B", "C", discs);
        scanner.close();
-       Iterator itr=result.iterator();//getting Iterator from arraylist to traverse elements  
+       Iterator itr = result.iterator();//getting Iterator from arraylist to traverse elements  
        while(itr.hasNext()){  
         System.out.println(itr.next());  
        }  
